@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+    margin : 0;
+    padding: 0;
+}
+
+
+body{
+    display: flex;
+
+
+}
+
+.sidebar{
+     background-color: aquamarine;
+    border: 1px solid black;
+    height: 100vh;
+    width: 200px;
+    padding-top: 20px;
+}
+
+.sidebar h2{
+    padding: 15px;
+    text-align: center;
+}
+
+.sidebar a{
+   display: block;
+   color: brown;
+   text-decoration: none;
+   padding: 15px 20px;
+   
+}
+
+.content{
+    padding: 20px;
+}
+
