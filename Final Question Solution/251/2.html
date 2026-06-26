@@ -1,28 +1,85 @@
+<!-- Declares that this document is an HTML5 document -->
 <!DOCTYPE html>
+
+<!-- Root element of the webpage -->
 <html>
+
 <head>
+
+    <!-- Title displayed in the browser tab -->
     <title>Venue Budget Calculator</title>
+
 </head>
+
 <body>
 
+    <!-- Main heading shown on the webpage -->
     <h2>UIU Tech Fest Budget Calculator</h2>
 
+    <!--
+        HTML Form
+
+        action="calculate.php"
+        → Sends the form data to calculate.php after submission.
+
+        method="post"
+        → Sends the data securely in the HTTP request body.
+        → POST is commonly used for forms that send user data.
+    -->
     <form action="calculate.php" method="post">
+
+        <!-- Input for the total number of attendees -->
         <label>Attendees:</label>
+
+        <!--
+            type="number"
+            → Only numbers are allowed.
+
+            name="attendees"
+            → This name is used in PHP to receive the value:
+               $_POST["attendees"]
+
+            required
+            → User must enter a value before submitting.
+        -->
         <input type="number" name="attendees" required>
+
         <br><br>
 
+        <!-- Input for the cost of one attendee -->
         <label>Cost Per Person:</label>
+
+        <!--
+            Example:
+            If food cost is 500 BDT per person,
+            the user enters 500.
+        -->
         <input type="number" name="costPerPerson" required>
+
         <br><br>
 
+        <!-- Input for venue capacity -->
         <label>Venue Capacity:</label>
+
+        <!--
+            Example:
+            If one hall can hold 200 people,
+            the user enters 200.
+        -->
         <input type="number" name="capacity" required>
+
         <br><br>
 
+        <!-- Submit button -->
+        <!--
+            When clicked:
+            1. All form data is collected.
+            2. Data is sent to calculate.php.
+            3. PHP performs the calculations.
+        -->
         <input type="submit" value="Calculate">
+
     </form>
 
 </body>
 </html>
-
