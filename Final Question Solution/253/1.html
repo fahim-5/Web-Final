@@ -1,30 +1,96 @@
+<!-- Declares this document as an HTML5 document -->
 <!DOCTYPE html>
+
+<!-- Root element of the webpage -->
 <html>
+
 <head>
+
+    <!-- Title displayed in the browser tab -->
     <title>Student Result Calculator</title>
+
 </head>
+
 <body>
 
+    <!-- Main heading displayed on the webpage -->
     <h2>Student Marks Calculator</h2>
 
+    <!--
+        HTML Form
+
+        action="result.php"
+        → Sends the entered marks to result.php.
+
+        method="post"
+        → Sends the data using the POST method.
+    -->
     <form action="result.php" method="post">
 
+        <!-- Class Test 1 Marks -->
         CT 1:
-        <input type="number" name="ct1" required><br><br>
 
+        <!--
+            type="number"
+            → Only numbers are allowed.
+
+            name="ct1"
+            → PHP receives this value using:
+               $_POST["ct1"]
+
+            required
+            → User must enter a value.
+        -->
+        <input type="number"
+               name="ct1"
+               required>
+
+        <br><br>
+
+        <!-- Class Test 2 Marks -->
         CT 2:
-        <input type="number" name="ct2" required><br><br>
 
+        <input type="number"
+               name="ct2"
+               required>
+
+        <br><br>
+
+        <!-- Class Test 3 Marks -->
         CT 3:
-        <input type="number" name="ct3" required><br><br>
 
+        <input type="number"
+               name="ct3"
+               required>
+
+        <br><br>
+
+        <!-- Midterm Marks -->
         Midterm Marks:
-        <input type="number" name="midterm" required><br><br>
 
+        <input type="number"
+               name="midterm"
+               required>
+
+        <br><br>
+
+        <!-- Final Exam Marks -->
         Final Marks:
-        <input type="number" name="final" required><br><br>
 
-        <input type="submit" value="Calculate Total">
+        <input type="number"
+               name="final"
+               required>
+
+        <br><br>
+
+        <!-- Submit Button -->
+        <!--
+            When clicked:
+            1. Sends all marks to result.php.
+            2. PHP calculates the result.
+        -->
+        <input type="submit"
+               value="Calculate Total">
 
     </form>
 
