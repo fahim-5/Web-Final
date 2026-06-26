@@ -1,26 +1,91 @@
+<!-- Declares this document as an HTML5 document -->
 <!DOCTYPE html>
+
+<!-- Root element of the webpage -->
 <html>
+
 <head>
+
+    <!-- Title displayed in the browser tab -->
     <title>Event Planning System</title>
+
 </head>
+
 <body>
 
-<h2>Event Planning System</h2>
+    <!-- Main heading displayed on the webpage -->
+    <h2>Event Planning System</h2>
 
-<form action="calculate.php" method="post">
+    <!--
+        HTML Form
 
-    Items Sold Per Day:
-    <input type="number" name="itemsPerDay" required><br><br>
+        action="calculate.php"
+        → Sends the entered data to calculate.php
 
-    Number of Days:
-    <input type="number" name="days" required><br><br>
+        method="post"
+        → Sends the data using the POST method.
+    -->
+    <form action="calculate.php" method="post">
 
-    Target Items:
-    <input type="number" name="target" required><br><br>
+        <!-- Number of items sold each day -->
+        Items Sold Per Day:
 
-    <input type="submit" value="Calculate">
+        <!--
+            type="number"
+            → Only numbers are allowed.
 
-</form>
+            name="itemsPerDay"
+            → PHP receives this value using:
+               $_POST["itemsPerDay"]
+
+            required
+            → User must enter a value.
+        -->
+        <input type="number"
+               name="itemsPerDay"
+               required>
+
+        <br><br>
+
+        <!-- Number of selling days -->
+        Number of Days:
+
+        <!--
+            Example:
+            If the event lasts 5 days,
+            enter 5.
+        -->
+        <input type="number"
+               name="days"
+               required>
+
+        <br><br>
+
+        <!-- Target number of items -->
+        Target Items:
+
+        <!--
+            Example:
+            If the goal is to sell
+            600 items,
+            enter 600.
+        -->
+        <input type="number"
+               name="target"
+               required>
+
+        <br><br>
+
+        <!-- Submit button -->
+        <!--
+            When clicked:
+            1. Sends all values to calculate.php
+            2. PHP performs the calculations.
+        -->
+        <input type="submit"
+               value="Calculate">
+
+    </form>
 
 </body>
 </html>
