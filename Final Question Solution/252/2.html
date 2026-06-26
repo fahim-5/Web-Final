@@ -1,28 +1,88 @@
-
+<!-- Declares this document as an HTML5 document -->
 <!DOCTYPE html>
+
+<!-- Root element of the webpage -->
 <html>
+
 <head>
+
+    <!-- Title shown in the browser tab -->
     <title>Movie Night Screen Calculator</title>
+
 </head>
+
 <body>
 
+    <!-- Main heading displayed on the webpage -->
     <h2>Movie Night Calculator</h2>
 
+    <!--
+        HTML Form
+
+        action="calculate.php"
+        → Sends the entered data to calculate.php
+
+        method="post"
+        → Sends data securely using the POST method.
+    -->
     <form action="calculate.php" method="post">
 
+        <!-- Total number of people attending the movie -->
         <label>Total Attendees:</label>
-        <input type="number" name="attendees" required>
+
+        <!--
+            type="number"
+            → Only numbers are allowed.
+
+            name="attendees"
+            → PHP receives this value using:
+               $_POST["attendees"]
+
+            required
+            → User must fill this field.
+        -->
+        <input type="number"
+               name="attendees"
+               required>
+
         <br><br>
 
+        <!-- Capacity of one movie screen -->
         <label>Seat Capacity per Screen:</label>
-        <input type="number" name="capacity" required>
+
+        <!--
+            Example:
+            If one screen has 100 seats,
+            the user enters 100.
+        -->
+        <input type="number"
+               name="capacity"
+               required>
+
         <br><br>
 
+        <!-- Ticket price for one seat -->
         <label>Ticket Price:</label>
-        <input type="number" name="ticketPrice" required>
+
+        <!--
+            Example:
+            If one ticket costs 350 BDT,
+            enter 350.
+        -->
+        <input type="number"
+               name="ticketPrice"
+               required>
+
         <br><br>
 
-        <input type="submit" value="Calculate">
+        <!-- Submit button -->
+        <!--
+            When clicked:
+            1. Sends all values to calculate.php
+            2. PHP performs calculations.
+        -->
+        <input type="submit"
+               value="Calculate">
 
     </form>
 
