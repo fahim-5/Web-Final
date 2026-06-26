@@ -1,20 +1,55 @@
+<!-- Declares that this document uses HTML5 -->
 <!DOCTYPE html>
+
+<!-- Root element of the webpage -->
 <html lang="en">
+
 <head>
+    <!-- Defines the character encoding as UTF-8 -->
     <meta charset="UTF-8">
+
+    <!-- Makes the webpage responsive on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title shown in the browser tab -->
     <title>Password Strength Checker</title>
+
+    <!-- Links the external JavaScript file -->
+    <!-- The browser loads One.js, which contains the password checking logic -->
     <script src="One.js"></script>
 </head>
+
 <body>
+
+    <!-- Main heading displayed on the webpage -->
     <h2>Password Strength Checker</h2>
 
-    <input type="password" id="password" placeholder="Enter Password">
-    <button onclick="checkStrength()">Check Strength</button>
+    <!--
+        Password input field.
+        type="password" hides the entered characters.
+        id="password" allows JavaScript to access this input.
+        placeholder shows a hint before the user types.
+    -->
+    <input
+        type="password"
+        id="password"
+        placeholder="Enter Password">
 
+    <!--
+        When this button is clicked,
+        the checkStrength() function inside One.js is executed.
+    -->
+    <button onclick="checkStrength()">
+        Check Strength
+    </button>
+
+    <!--
+        Empty heading where JavaScript will display:
+        - Password score
+        - Password strength
+        - Number of attempts
+    -->
     <h3 id="result"></h3>
 
 </body>
 </html>
-
-
