@@ -1,18 +1,62 @@
-
+<!-- Declares this document as an HTML5 document -->
 <!DOCTYPE html>
+
+<!-- Root element of the webpage -->
 <html>
+
 <head>
+
+    <!-- Title displayed in the browser tab -->
     <title>Daily Calorie Tracker</title>
+
 </head>
+
 <body>
 
+    <!-- Main heading displayed on the webpage -->
     <h2>Daily Calorie Tracker</h2>
 
-    <input type="number" id="calories" placeholder="Enter calories">
-    <button onclick="addCalories()">Add Calories</button>
+    <!--
+        Input box for entering calories.
 
+        type="number"
+        → Allows only numeric values.
+
+        id="calories"
+        → Used by JavaScript to access this input.
+
+        placeholder
+        → Displays hint text before the user types.
+    -->
+    <input
+        type="number"
+        id="calories"
+        placeholder="Enter calories">
+
+    <!--
+        When this button is clicked,
+        JavaScript calls the addCalories() function.
+    -->
+    <button onclick="addCalories()">
+        Add Calories
+    </button>
+
+    <!--
+        Empty heading.
+
+        JavaScript will display:
+        • Total Calories
+        • Daily Goal
+        • Number of Entries
+        • Feedback Message
+    -->
     <h3 id="result"></h3>
 
+    <!--
+        Connect the external JavaScript file.
+
+        All program logic is inside script.js.
+    -->
     <script src="script.js"></script>
 
 </body>
